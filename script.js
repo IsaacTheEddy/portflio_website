@@ -83,9 +83,9 @@ gsap.from(".about_me_text", {
     ease: "power4.out",
     scrollTrigger: {
         trigger: "#contact",
-        start: "top 135%",
-        end: "bottom bottom",
-        // markers: true
+        start: "top 110%",
+        end: "bottom 135%",
+        markers: true
     }
 })
 
