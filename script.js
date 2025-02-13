@@ -85,7 +85,7 @@ gsap.from(".about_me_text", {
         trigger: "#contact",
         start: "top 110%",
         end: "bottom 135%",
-        markers: true
+        // markers: true
     }
 })
 
