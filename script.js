@@ -31,7 +31,7 @@ gsap.from(".right p", {
     ease: "elastic.inOut",
     scrollTrigger: {
         trigger: "#invisible",
-        start: "top 70%",
+        start: "top 65%",
         end: "bottom center",
         scrub: 2,
         // markers: true
@@ -43,7 +43,7 @@ gsap.from(".left #profile_wrap", {
     ease: "power4.in",
     scrollTrigger: {
         trigger: "#invisible",
-        start: "top center",
+        start: "top 65%",
         end: "bottom center",
         scrub: 2,
         // markers: true
@@ -82,6 +82,9 @@ gsap.from(".about_me_text", {
     delay: 1.0,
     ease: "power4.out",
     scrollTrigger: {
+        trigger: "#contact",
+        start: "top 135%",
+        end: "bottom bottom",
         // markers: true
     }
 })

@@ -171,7 +171,7 @@ align-items: flex-end;
     border-radius: 10px;
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
-    max-width: 20vw;
+    max-width: 25vw;
     max-height: fit-content;
     text-align: center;
   }
