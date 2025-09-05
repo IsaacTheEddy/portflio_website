@@ -1,6 +1,11 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle } from "ogl";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export interface GradientBlindsProps {
   className?: string;
@@ -393,16 +398,49 @@ void main() {
     shineDirection,
   ]);
 
+  useGSAP(() => {
+    let tl = gsap.timeline();
+    tl.to(".words", {
+      opacity: 0,
+      duration: 1,
+    })
+      .to(".words", {
+        opacity: 1,
+        duration: 3,
+        ease: "bounce.inOut",
+      })
+      .fromTo(
+        ".words2",
+        {
+          opacity: 0,
+          duration: 1,
+          x: "500%",
+        },
+        {
+          opacity: 1,
+          duration: 3,
+          ease: "circ.inOut",
+          x: "0",
+        }
+      );
+  });
+
   return (
-    <div
-      ref={containerRef}
-      className={`w-full h-full overflow-hidden relative ${className}`}
-      style={{
-        ...(mixBlendMode && {
-          mixBlendMode: mixBlendMode as React.CSSProperties["mixBlendMode"],
-        }),
-      }}
-    />
+    <>
+      <div
+        ref={containerRef}
+        className={`w-full h-full overflow-hidden relative ${className}`}
+        style={{
+          ...(mixBlendMode && {
+            mixBlendMode: mixBlendMode as React.CSSProperties["mixBlendMode"],
+          }),
+        }}
+      />
+      <div className=" box flex flex-col absolute space-y-5 items-center justify-center w-full overflow-hidden text-white ">
+        <h1 className="words text-3xl font-bold opacity-0">Isaac Edwards</h1>
+        <h1 className="words2 text-6xl opacity-0">Web Developer</h1>
+      </div>
+    </>
   );
 };
 
