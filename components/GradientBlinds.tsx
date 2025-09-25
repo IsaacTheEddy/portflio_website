@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle } from "ogl";
 import gsap from "gsap";
@@ -71,9 +70,20 @@ const GradientBlinds: React.FC<GradientBlindsProps> = ({
   const meshRef = useRef<Mesh<Triangle> | null>(null);
   const geometryRef = useRef<Triangle | null>(null);
   const rendererRef = useRef<Renderer | null>(null);
-  const mouseTargetRef = useRef<[number, number]>([0, 0]);
   const lastTimeRef = useRef<number>(0);
   const firstResizeRef = useRef<boolean>(true);
+
+  useGSAP(() => {
+    if (programRef.current) {
+      gsap.to(programRef.current.uniforms.uDistort, {
+        value: 5,
+        duration: 2,
+        yoyo: true,
+        repeat: -1,
+        ease: "sine.inOut",
+      });
+    }
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -182,6 +192,11 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     vec2 uv = pr * 0.5 + 0.5;
 
     vec2 uvMod = uv;
+
+    float flow_amplitude = 0.03;
+    float flow_frequency = 10.0;
+    uvMod.x += sin(uvMod.y * flow_frequency + iTime) * flow_amplitude;
+
     if (uDistort > 0.0) {
       float a = uvMod.y * 6.0;
       float b = uvMod.x * 6.0;
@@ -307,7 +322,6 @@ void main() {
         const cx = gl.drawingBufferWidth / 2;
         const cy = gl.drawingBufferHeight / 2;
         uniforms.iMouse.value = [cx, cy];
-        mouseTargetRef.current = [cx, cy];
       }
     };
 
@@ -315,35 +329,10 @@ void main() {
     const ro = new ResizeObserver(resize);
     ro.observe(container);
 
-    const onPointerMove = (e: PointerEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      const scale = (renderer as unknown as { dpr?: number }).dpr || 1;
-      const x = (e.clientX - rect.left) * scale;
-      const y = (rect.height - (e.clientY - rect.top)) * scale;
-      mouseTargetRef.current = [x, y];
-      if (mouseDampening <= 0) {
-        uniforms.iMouse.value = [x, y];
-      }
-    };
-    canvas.addEventListener("pointermove", onPointerMove);
-
     const loop = (t: number) => {
       rafRef.current = requestAnimationFrame(loop);
       uniforms.iTime.value = t * 0.001;
-      if (mouseDampening > 0) {
-        if (!lastTimeRef.current) lastTimeRef.current = t;
-        const dt = (t - lastTimeRef.current) / 1000;
-        lastTimeRef.current = t;
-        const tau = Math.max(1e-4, mouseDampening);
-        let factor = 1 - Math.exp(-dt / tau);
-        if (factor > 1) factor = 1;
-        const target = mouseTargetRef.current;
-        const cur = uniforms.iMouse.value;
-        cur[0] += (target[0] - cur[0]) * factor;
-        cur[1] += (target[1] - cur[1]) * factor;
-      } else {
-        lastTimeRef.current = t;
-      }
+
       if (!paused && programRef.current && meshRef.current) {
         try {
           renderer.render({ scene: meshRef.current });
@@ -356,7 +345,6 @@ void main() {
 
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      canvas.removeEventListener("pointermove", onPointerMove);
       ro.disconnect();
       if (canvas.parentElement === container) {
         container.removeChild(canvas);
@@ -398,33 +386,6 @@ void main() {
     shineDirection,
   ]);
 
-  useGSAP(() => {
-    let tl = gsap.timeline();
-    tl.to(".words", {
-      opacity: 0,
-      duration: 1,
-    })
-      .to(".words", {
-        opacity: 1,
-        duration: 3,
-        ease: "bounce.inOut",
-      })
-      .fromTo(
-        ".words2",
-        {
-          opacity: 0,
-          duration: 1,
-          x: "500%",
-        },
-        {
-          opacity: 1,
-          duration: 3,
-          ease: "circ.inOut",
-          x: "0",
-        }
-      );
-  });
-
   return (
     <>
       <div
@@ -436,10 +397,6 @@ void main() {
           }),
         }}
       />
-      <div className=" box flex flex-col absolute space-y-5 items-center justify-center w-full overflow-hidden text-white ">
-        <h1 className="words text-3xl font-bold opacity-0">Isaac Edwards</h1>
-        <h1 className="words2 text-6xl opacity-0">Web Developer</h1>
-      </div>
     </>
   );
 };
