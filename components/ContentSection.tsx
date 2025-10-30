@@ -17,8 +17,10 @@ export default function ContentSection({
 
   return (
     <section className="flex h-screen items-center justify-center w-full">
-      <div className={`flex ${flexDirection} items-center justify-center w-4/5`}>
-        <div className="w-1/2 p-8">
+      <div
+        className={`flex ${flexDirection} items-center justify-center w-4/5 opacity-95 bg-gray-800 rounded-4xl`}
+      >
+        <div className="w-1/2 p-8 rounded-2xl ">
           <h2 className="text-3xl font-bold mb-4">{title}</h2>
           <p>{children}</p>
         </div>

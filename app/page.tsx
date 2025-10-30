@@ -1,11 +1,12 @@
 "use client";
-import ContentSection from "@/components/ContentSection";
+
 import Portfolio from "@/components/PortfolioSection";
 import IsaacPic from "@/public/assets/Isaac_Edwards_1_Formatted.jpg";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ContentSection from "@/components/ContentSection";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -44,35 +45,25 @@ export default function Home() {
         <p className="text-2xl mt-4">Web Developer</p>
       </div>
       <ContentSection title="About Me" imageUrl={IsaacPic.src}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        Full-stack developer with a strong foundation in both Front-end and
+        Back-end engineering. Proven ability to build scalable applications,
+        design and craft efficient RESTful APIs, and manage complex database
+        operations. Eager to join a collaborative team to contribute, learn, and
+        grow while delivering impactful solutions across the entire technology
+        stack.
       </ContentSection>
-      <div id="mission" ref={missionSectionRef}>
-        <ContentSection
-          title="My Mission"
-          imageUrl={IsaacPic.src}
-          reverse={true}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </ContentSection>
-      </div>
       <section
         id="portfolio"
         ref={portfolioRef}
-        className="h-screen opacity-90 bg-gray-800 text-white flex items-center justify-center"
+        className="h-screen opacity-90 bg-gray-800 text-white "
       >
         <Portfolio />
+      </section>
+      <section id="resume">
+        <div className="h-screen flex w-full">
+          <h1>Resume</h1>
+          <p></p>
+        </div>
       </section>
 
       {/* Floating Bottom Navigation Bar */}
@@ -100,6 +91,14 @@ export default function Home() {
               className="text-white hover:text-gray-300"
             >
               Portfolio
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => scrollToSection("resume")}
+              className="text-white hover:text-gray-300"
+            >
+              Resume
             </button>
           </li>
         </ul>
