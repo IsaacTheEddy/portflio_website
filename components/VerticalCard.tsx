@@ -11,7 +11,7 @@ export default function VerticalCard({
   children: React.ReactNode;
   img: string;
   title: string;
-  video?: any;
+  video?: string;
   link: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);

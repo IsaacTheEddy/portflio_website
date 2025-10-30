@@ -1,6 +1,10 @@
 "use client";
 
-import GradientBlinds from "@/components/GradientBlinds";
+import dynamic from "next/dynamic";
+
+const GradientBlinds = dynamic(() => import("@/components/GradientBlinds"), {
+  ssr: false,
+});
 
 export default function Background({ children }: { children: React.ReactNode }) {
   return (

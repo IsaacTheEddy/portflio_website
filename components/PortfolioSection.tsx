@@ -1,9 +1,10 @@
 "use client";
 
 import VerticalCard from "@/components/VerticalCard";
-import HorizontalCard from "@/components/HorizontalCard";
 import AtlasCinPic from "@/public/assets/Atlas_Cinema_Pic.png";
 import AtlasMusicPlayer from "@/public/assets/Atlas_Music_Player.png";
+
+const MusicLink = "https://gilded-granita-cb7364.netlify.app/";
 
 export default function Portfolio() {
   return (
@@ -24,28 +25,30 @@ export default function Portfolio() {
           recent activity.
           <br></br>
           <br></br>
-          <li className="ml-3">
-            <b>Next.js 15 and React 19:</b> Developed with the latest versions
-            of these leading web development frameworks, demonstrating the
-            developer's commitment to staying
-          </li>
-          <li className="ml-3">
-            <b>NextAuth.js v5:</b> Implements robust authentication, allowing
-            users to seamlessly sign in with their GitHub accounts and access
-            personalized movie lists.
-          </li>
-          <li className="ml-3">
-            <b>Vercel Postgres and Kysely: </b>Leverages Vercel Postgres, a
-            user-friendly serverless database, in conjunction with Kysely, a
-            type-safe SQL query builder that enhances security by preventing SQL
-            injection attacks.
-          </li>
+          <ul>
+            <li className="">
+              <b>Next.js 15 and React 19:</b> Developed with the latest versions
+              of these leading web development frameworks, demonstrating the
+              developer's commitment to staying
+            </li>
+            <li className="">
+              <b>NextAuth.js v5:</b> Implements robust authentication, allowing
+              users to seamlessly sign in with their GitHub accounts and access
+              personalized movie lists.
+            </li>
+            <li className="">
+              <b>Vercel Postgres and Kysely: </b>Leverages Vercel Postgres, a
+              user-friendly serverless database, in conjunction with Kysely, a
+              type-safe SQL query builder that enhances security by preventing SQL
+              injection attacks.
+            </li>
+          </ul>
         </VerticalCard>
         <VerticalCard
           img={AtlasMusicPlayer.src}
           title="Music Player"
           video="/assets/videos/Atlas_Music_Player_Vid.mp4"
-          link="https://gilded-granita-cb7364.netlify.app/"
+          link={MusicLink}
         >
           Welcome to the Atlas Music Player project. This application was
           developed to demonstrate core front-end engineering skills through the
@@ -54,6 +57,7 @@ export default function Portfolio() {
           architecture and modern development tooling.
           <br></br>
           <br></br>
+          <ul>
           <li>
             <b>React:</b> Utilized this popular library to construct the user
             interface. Its component-based architecture was leveraged to ensure
@@ -71,6 +75,7 @@ export default function Portfolio() {
             accessed and integrated into the application using asynchronous
             fetching, ensuring efficient loading of the music catalog.
           </li>
+          </ul>
         </VerticalCard>
       </div>
     </div>

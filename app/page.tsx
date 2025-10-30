@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContentSection from "@/components/ContentSection";
+// import { Document } from "react-pdf";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -61,7 +62,9 @@ export default function Home() {
       </section>
       <section id="resume">
         <div className="h-screen flex w-full">
-          <h1>Resume</h1>
+          {/* <Document
+            file={"@public_Isaac Edwards Resume Back-End Engineer.pdf"}
+          /> */}
           <p></p>
         </div>
       </section>

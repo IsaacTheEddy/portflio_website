@@ -70,7 +70,7 @@ const GradientBlinds: React.FC<GradientBlindsProps> = ({
   const meshRef = useRef<Mesh<Triangle> | null>(null);
   const geometryRef = useRef<Triangle | null>(null);
   const rendererRef = useRef<Renderer | null>(null);
-  const lastTimeRef = useRef<number>(0);
+  //   const lastTimeRef = useRef<number>(0);
   const firstResizeRef = useRef<boolean>(true);
 
   useGSAP(() => {
