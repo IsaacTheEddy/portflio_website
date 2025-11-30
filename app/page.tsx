@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </section>
       {/* Resume */}
-      <section id="resume" className="pt-10">
+      <section id="resume" className="pt-10 ">
         <ResumeChoice />
       </section>
 

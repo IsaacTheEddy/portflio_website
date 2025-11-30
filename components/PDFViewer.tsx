@@ -35,7 +35,7 @@ export default function PDFViewer({ file }: PDFViewerProps) {
 
   return (
     <div
-      className="flex w-full max-w-5xl items-center justify-center"
+      className="flex w-full max-w-xl items-center justify-center"
       ref={setContainerRef}
     >
       <Document
