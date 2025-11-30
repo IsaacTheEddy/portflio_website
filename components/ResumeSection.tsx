@@ -55,7 +55,7 @@ export default function ResumeChoice() {
                 className="flex-[0_0_100%] min-w-0 flex flex-col md:flex-row items-center justify-around gap-16 px-4 md:px-12"
               >
                 {/* Title Section (Left) */}
-                <div className="w-full md:w-1/3 flex flex-col justify-center md:justify-end items-center">
+                <div className="w-full md:w-1/3 flex flex-col justify-center md:justify-end items-center text-white">
                   <h2 className="text-3xl font-bold text-center md:text-left md:text-5xl leading-tight">
                     {resume.title}
                   </h2>
@@ -68,7 +68,7 @@ export default function ResumeChoice() {
                     <a
                       href={resume.file}
                       download={`${resume.title.replace(/\s+/g, "_")}.pdf`}
-                      className="rounded opacity-80 bg-gray-800 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+                      className="rounded opacity-80 px-4 py-2  transition-colors  bg-gray-700 text-white hover:bg-gray-600"
                       aria-label={`Download ${resume.title} Resume`}
                     >
                       Download PDF
@@ -90,14 +90,14 @@ export default function ResumeChoice() {
         {/* NAVIGATION BUTTONS */}
         <div className="mt-6 flex justify-around gap-4">
           <button
-            className="rounded opacity-90 bg-gray-800 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+            className="rounded opacity-90  px-4 py-2  transition-colors  bg-gray-700 text-white hover:bg-gray-600"
             onClick={scrollPrev}
             aria-label="Previous resume"
           >
             Previous
           </button>
           <button
-            className="rounded opacity-90 bg-gray-800 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+            className="rounded opacity-90  px-4 py-2  transition-colors  bg-gray-700 text-white hover:bg-gray-600"
             onClick={scrollNext}
             aria-label="Next resume"
           >
