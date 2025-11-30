@@ -55,13 +55,7 @@ export default function Home() {
         stack.
       </ContentSection>
       {/* Certifications and Diplomas */}
-      <section id="CertsAndDips">
-        <div className="h-screen flex flex-col items-center justify-center text-white">
-          <h2 className="text-4xl font-bold mb-8">
-            Certifications and Diplomas
-          </h2>
-        </div>
-      </section>
+      <section id="CertsAndDips"></section>
       {/* PortFolio Projs */}
       <section id="portfolio" ref={portfolioRef}>
         <div className="h-full opacity-90 bg-gray-800 text-white ">
