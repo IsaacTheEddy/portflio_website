@@ -11,54 +11,32 @@ export default function VerticalCard({
   children: React.ReactNode;
   img: string;
   title: string;
-  video?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  video?: any;
   link: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-    if (videoRef.current) {
-      videoRef.current.pause();
-    }
-  };
 
   return (
-    <div
-      className="w-lg bg-white border rounded-t-lg border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 "
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {isHovering && video ? (
-        <Video
-          ref={videoRef}
-          className=" max-w-lg"
-          src={video}
-          poster={img}
-          muted
-          loop
-          playsInline
-        />
-      ) : (
-        <img className="" src={img} alt="" />
-      )}
+    <div className="w-lg bg-white border rounded-t-lg border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
+      <Video
+        ref={videoRef}
+        className=" max-w-lg"
+        src={video}
+        poster={img}
+        muted
+        loop
+        playsInline
+      />
       <div className="p-5">
         <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">
             {title}
           </h5>
         </a>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <div className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {children}
-        </p>
+        </div>
         <a
           href={link}
           target="_blank"
