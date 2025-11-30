@@ -29,16 +29,16 @@ export default function ResumeChoice() {
       file: "/Isaac Edwards Full-Stack Web Developer Resume.pdf",
       text: "Full-stack web developer with a strong foundation in both front-end and back-end engineering",
     },
-    {
-      title: "Front-End Engineer",
-      file: "/Isaac Edwards Resume_Front-End_Engineer.pdf",
-      text: "Front-End focused web developer with a strong foundation in both front-end/full-stack development",
-    },
-    {
-      title: "Back-End Engineer",
-      file: "/_Isaac Edwards Resume Back-End Engineer.pdf",
-      text: "Back-End developer with a strong foundation in Data Analysis, API Development, and Back-End development engineering",
-    },
+    // {
+    //   title: "Front-End Engineer",
+    //   file: "/Isaac Edwards Resume_Front-End_Engineer.pdf",
+    //   text: "Front-End focused web developer with a strong foundation in both front-end/full-stack development",
+    // },
+    // {
+    //   title: "Back-End Engineer",
+    //   file: "/_Isaac Edwards Resume Back-End Engineer.pdf",
+    //   text: "Back-End developer with a strong foundation in Data Analysis, API Development, and Back-End development engineering",
+    // },
   ];
 
   return (

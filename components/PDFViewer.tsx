@@ -48,8 +48,8 @@ export default function PDFViewer({ file }: PDFViewerProps) {
         <Page
           pageNumber={pageNumber}
           width={containerWidth ? Math.min(containerWidth, 1000) : undefined}
-          renderTextLayer={false}
-          renderAnnotationLayer={false}
+          renderTextLayer={true}
+          renderAnnotationLayer={true}
         />
       </Document>
     </div>

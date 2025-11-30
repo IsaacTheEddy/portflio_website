@@ -5,10 +5,13 @@ import useEmblaCarousel from "embla-carousel-react";
 import VerticalCard from "@/components/VerticalCard";
 import AtlasCinPic from "@/public/assets/Atlas_Cinema_Pic.png";
 import AtlasMusicPlayer from "@/public/assets/Atlas_Music_Player.png";
+import SmileSchool from "@/public/assets/Smile_School.png";
 import AtlasCinemaVid from "@/public/assets/videos/Atlas_Cinema_Vid.mp4";
 import AtlasMusicPlayerVid from "@/public/assets/videos/Atlas_Music_Player_Vid.mp4";
 
 const MusicLink = "https://gilded-granita-cb7364.netlify.app/";
+const SmileSchoolLink =
+  "https://isaactheeddy.github.io/atlas-web-development/css_advanced/index.html";
 
 export default function Portfolio() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -111,42 +114,29 @@ export default function Portfolio() {
                 </ul>
               </VerticalCard>
             </div>
-            {/* SLIDE 3[Dk Yet] */}
+            {/* SLIDE Smile School */}
             <div className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_50%] min-w-0 flex justify-center">
               <VerticalCard
-                img={AtlasMusicPlayer.src}
-                title="Music Player"
-                video={AtlasMusicPlayerVid}
-                link={MusicLink}
+                img={SmileSchool.src}
+                title="Smile School"
+                link={SmileSchool.src}
               >
-                Welcome to the Atlas Music Player project. This application was
-                developed to demonstrate core front-end engineering skills
-                through the construction of a simple, clean, and highly
-                responsive music playback interface. The project emphasizes
-                functional, component-based architecture and modern development
-                tooling.
+                This Smile School project. This application was developed to
+                demonstrate core front-end engineering skills through the
+                construction of a simple, clean, and robust use of responsive
+                design. The project emphasizes UI design through base styling
+                and layout.
                 <br></br>
                 <br></br>
                 <ul>
                   <li>
-                    <b>React:</b> Utilized this popular library to construct the
-                    user interface. Its component-based architecture was
-                    leveraged to ensure the codebase is modular, organized, and
-                    highly reusable.
+                    <b>HTML:</b> HTML is the builidng block of the web. With so
+                    many tools and librarys made to make HTML eaiser to use and
+                    less of a focus, I set out to make it my entire focus.
                   </li>
                   <li>
-                    <b>Vite & TypeScript:</b> The build process was handled by
-                    Vite, chosen for its speed and smooth development
-                    experience. TypeScript was implemented across the project to
-                    maintain code quality, enhance collaboration, and
-                    proactively catch bugs.
-                  </li>
-                  <li>
-                    <b>JSON-based Data Management:</b> The playlist information
-                    is managed using a simple and effective JSON file. This data
-                    is accessed and integrated into the application using
-                    asynchronous fetching, ensuring efficient loading of the
-                    music catalog.
+                    <b>CSS:</b> Using CSS for styling, The entire webpage was
+                    handcrafted to be responsive, modern and sleek.
                   </li>
                 </ul>
               </VerticalCard>

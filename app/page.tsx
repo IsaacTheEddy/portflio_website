@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContentSection from "@/components/ContentSection";
-import ResumeChoice from "@/components/ResumeSection";
+import ResumeSolo from "@/components/ResumeSolo";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -43,10 +43,10 @@ export default function Home() {
         className="h-screen flex flex-col items-center justify-center text-white"
       >
         <h1 className="text-5xl font-bold">Isaac Edwards</h1>
-        <p className="text-2xl mt-4">Web Developer</p>
+        <p className="text-2xl mt-4">Full-Stack Web Developer</p>
       </div>
       {/* Who Section */}
-      <ContentSection title="About Me" imageUrl={IsaacPic.src}>
+      <ContentSection title="Who am I" imageUrl={IsaacPic.src}>
         Full-stack developer with a strong foundation in both Front-end and
         Back-end engineering. Proven ability to build scalable applications,
         design and craft efficient RESTful APIs, and manage complex database
@@ -64,7 +64,7 @@ export default function Home() {
       </section>
       {/* Resume */}
       <section id="resume" className="pt-10 ">
-        <ResumeChoice />
+        <ResumeSolo />
       </section>
 
       {/* Floating Bottom Navigation Bar */}
@@ -78,14 +78,14 @@ export default function Home() {
               Home
             </button>
           </li>
-          <li>
+          {/* <li>
             <button
               onClick={() => scrollToSection("CertsAndDips")}
               className="text-white hover:text-gray-300"
             >
               Certs and Dips
             </button>
-          </li>
+          </li> */}
           <li>
             <button
               onClick={() => scrollToSection("portfolio")}
