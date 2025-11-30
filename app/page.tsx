@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* Floating Bottom Navigation Bar */}
-      <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 p-4 bg-gray-800 rounded-full shadow-2xl z-50">
+      <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 p-4 opacity-80 bg-gray-800 rounded-full shadow-2xl z-50 hidden md:block">
         <ul className="flex space-x-4">
           <li>
             <button

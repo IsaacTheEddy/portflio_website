@@ -32,10 +32,12 @@ export default function ResumeChoice() {
     {
       title: "Front-End Engineer",
       file: "/Isaac Edwards Resume_Front-End_Engineer.pdf",
+      text: "Front-End focused web developer with a strong foundation in both front-end/full-stack development",
     },
     {
       title: "Back-End Engineer",
       file: "/_Isaac Edwards Resume Back-End Engineer.pdf",
+      text: "Back-End developer with a strong foundation in Data Analysis, API Development, and Back-End development engineering",
     },
   ];
 
@@ -57,7 +59,21 @@ export default function ResumeChoice() {
                   <h2 className="text-3xl font-bold text-center md:text-left md:text-5xl leading-tight">
                     {resume.title}
                   </h2>
-                  <p>{resume.text}</p>
+                  {resume.text && (
+                    <p className="mt-2 text-center md:text-left">
+                      {resume.text}
+                    </p>
+                  )}
+                  <div className="mt-4">
+                    <a
+                      href={resume.file}
+                      download={`${resume.title.replace(/\s+/g, "_")}.pdf`}
+                      className="rounded opacity-80 bg-gray-800 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+                      aria-label={`Download ${resume.title} Resume`}
+                    >
+                      Download PDF
+                    </a>
+                  </div>
                 </div>
 
                 {/* PDF Section (Right) */}
@@ -74,14 +90,14 @@ export default function ResumeChoice() {
         {/* NAVIGATION BUTTONS */}
         <div className="mt-6 flex justify-around gap-4">
           <button
-            className="rounded bg-gray-200 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+            className="rounded opacity-90 bg-gray-800 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
             onClick={scrollPrev}
             aria-label="Previous resume"
           >
             Previous
           </button>
           <button
-            className="rounded bg-gray-200 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+            className="rounded opacity-90 bg-gray-800 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
             onClick={scrollNext}
             aria-label="Next resume"
           >
