@@ -46,7 +46,7 @@ export default function Home() {
         <p className="text-2xl mt-4">Full-Stack Web Developer</p>
       </div>
       {/* Who Section */}
-      <ContentSection title="Who am I" imageUrl={IsaacPic.src}>
+      <ContentSection title="Full-Stack Developer" imageUrl={IsaacPic.src}>
         Full-stack developer with a strong foundation in both Front-end and
         Back-end engineering. Proven ability to build scalable applications,
         design and craft efficient RESTful APIs, and manage complex database

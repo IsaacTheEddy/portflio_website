@@ -92,3 +92,13 @@ public/assets/videos/*
 !public/assets/videos/*.js
 !public/assets/videos/*.ts
 public/_next-video
+
+# next-video
+videos/*
+!videos/*.json
+!videos/*.js
+!videos/*.ts
+public/_next-video
+
+# Force include Cinema_Guru.mp4
+!public/assets/videos/Cinema_Guru.mp4

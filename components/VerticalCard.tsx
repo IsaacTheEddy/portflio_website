@@ -7,6 +7,8 @@ export default function VerticalCard({
   title,
   video,
   link,
+  mute,
+  isVideo = true,
 }: {
   children: React.ReactNode;
   img: string;
@@ -14,20 +16,28 @@ export default function VerticalCard({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   video?: any;
   link: string;
+  mute?: boolean;
+  isVideo?: boolean;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
-    <div className="w-lg  border rounded-t-lg  rounded-lg shadow-sm bg-gray-800 border-gray-700 ">
-      <Video
-        ref={videoRef}
-        className=" max-w-lg"
-        src={video}
-        poster={img}
-        muted
-        loop
-        playsInline
-      />
+    <div className=" flex flex-col h-fit w-lg border rounded-t-lg rounded-lg shadow-sm bg-gray-800 border-gray-700 ">
+      {isVideo == true ? (
+        <Video
+          ref={videoRef}
+          className=" max-w-lg"
+          src={video}
+          poster={img}
+          muted={mute}
+          loop
+          playsInline
+        />
+      ) : (
+        <div>
+          <img src={img} alt="" />
+        </div>
+      )}
       <div className="p-5">
         <a href="#">
           <h5 className="mb-2 font-bold tracking-tight  dark:text-white">

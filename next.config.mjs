@@ -8,4 +8,4 @@ const nextConfig = {
   },
 };
 
-export default withNextVideo(nextConfig);
+export default withNextVideo(nextConfig, { folder: 'public/assets/videos' });

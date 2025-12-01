@@ -6,12 +6,14 @@ import VerticalCard from "@/components/VerticalCard";
 import AtlasCinPic from "@/public/assets/Atlas_Cinema_Pic.png";
 import AtlasMusicPlayer from "@/public/assets/Atlas_Music_Player.png";
 import SmileSchool from "@/public/assets/Smile_School.png";
-import AtlasCinemaVid from "@/public/assets/videos/Atlas_Cinema_Vid.mp4";
+import RockAndRoll from "@/public/assets/Rock_And_Roll.png";
+import AtlasCinemaVid from "@/public/assets/videos/Cinema_Guru.mp4";
 import AtlasMusicPlayerVid from "@/public/assets/videos/Atlas_Music_Player_Vid.mp4";
 
 const MusicLink = "https://gilded-granita-cb7364.netlify.app/";
 const SmileSchoolLink =
   "https://isaactheeddy.github.io/atlas-web-development/css_advanced/index.html";
+const RockAndRollLink = "https://isaactheeddy.github.io/atlas-bootstrap/";
 
 export default function Portfolio() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -22,6 +24,7 @@ export default function Portfolio() {
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
+  3;
 
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
@@ -44,6 +47,7 @@ export default function Portfolio() {
                 title="Cinema Guru"
                 video={AtlasCinemaVid}
                 link="https://atlas-cinema-guru-inky.vercel.app/"
+                mute={true}
               >
                 This is a modern web application built with a Next.js frontend
                 and backend, utilizing a Vercel Postgres database. This
@@ -119,7 +123,8 @@ export default function Portfolio() {
               <VerticalCard
                 img={SmileSchool.src}
                 title="Smile School"
-                link={SmileSchool.src}
+                link={SmileSchoolLink}
+                isVideo={false}
               >
                 This Smile School project. This application was developed to
                 demonstrate core front-end engineering skills through the
@@ -141,25 +146,54 @@ export default function Portfolio() {
                 </ul>
               </VerticalCard>
             </div>
+            {/* SLIDE Rock and Roll */}
+            <div className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_50%] min-w-0 flex justify-center">
+              <VerticalCard
+                img={RockAndRoll.src}
+                title="Rock and Roll Inc"
+                link={RockAndRollLink}
+                isVideo={false}
+              >
+                This is a fun website I made using HTML/CSS and Bootstrap. This
+                was a project to practice using the Bootstrap framework for
+                styling and UI. The mock content was staged as an Excavation
+                Company that specilizes in collecting and selling various rocks.
+                Featuring actual rock knowledge the links in the footer are
+                hilarous and should not be overlooked.
+                <br></br>
+                <br></br>
+                <ul>
+                  <li>
+                    <b>HTML:</b> HTML is the builidng block of the web. With so
+                    many tools and librarys made to make HTML eaiser to use and
+                    less of a focus, I set out to make it my entire focus.
+                  </li>
+                  <li>
+                    <b>BootStrap</b> Using BootStrap for styling, The entire
+                    webpage was handcrafted to be responsive, modern and sleek.
+                  </li>
+                </ul>
+              </VerticalCard>
+            </div>
           </div>
-        </div>
 
-        {/* NAVIGATION BUTTONS */}
-        <div className="flex justify-center gap-4 mt-6">
-          <button
-            className="px-4 py-2 bg-gray-700 rounded  hover:bg-gray-600 text-white  transition-colors"
-            onClick={scrollPrev}
-            aria-label="Previous slide"
-          >
-            Previous
-          </button>
-          <button
-            className="px-4 py-2 bg-gray-700 rounded  hover:bg-gray-600 text-white  transition-colors"
-            onClick={scrollNext}
-            aria-label="Next slide"
-          >
-            Next
-          </button>
+          {/* NAVIGATION BUTTONS */}
+          <div className="flex justify-center gap-60  mt-6">
+            <button
+              className="px-4 py-2 bg-gray-700 rounded  hover:bg-gray-600 text-white  transition-colors"
+              onClick={scrollPrev}
+              aria-label="Previous slide"
+            >
+              Previous
+            </button>
+            <button
+              className="px-4 py-2 bg-gray-700 rounded  hover:bg-gray-600 text-white  transition-colors"
+              onClick={scrollNext}
+              aria-label="Next slide"
+            >
+              Next
+            </button>
+          </div>
         </div>
       </div>
     </div>
