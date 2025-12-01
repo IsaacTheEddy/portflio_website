@@ -34,6 +34,23 @@ export default function Portfolio() {
     <div className="flex flex-col items-center justify-center w-full py-10">
       <h2 className="text-4xl font-bold mb-8">Portfolio</h2>
 
+      <div className="flex items-center justify-center gap-2 mb-6 text-gray-500">
+        <span className="text-sm font-medium">Swipe to explore</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="currentColor"
+          className="w-5 h-5 animate-bounce-right"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+          />
+        </svg>
+      </div>
       {/* CAROUSEL WRAPPER */}
       <div className="relative w-full max-w-7xl px-4">
         {/* EMBLA VIEWPORT */}
