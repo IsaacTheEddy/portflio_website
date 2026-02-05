@@ -1,5 +1,6 @@
 import ArticleItemList from "@/components/ArticleListItem";
 import { getCatagorizedArticles } from "@/lib/articles";
+import { redirect } from "next/navigation";
 
 export default function Page() {
   const articles = getCatagorizedArticles();
@@ -9,11 +10,11 @@ export default function Page() {
     <section className=" font-cormorantGarmond mx-auto w-11/12 md:w-1/2 mt-20 flex flex-col gap-16 mb-20 ">
       <div></div>
       <header className="">
-        <h1 className="font-light text-6xl text-neutral-900 text center">
+        <h1 className="font-light text-6xl text-neutral-900 text center mb-5">
           {" "}
-          minimal blog
+          Under Construction
         </h1>
-        <section className="md:grid md:grid-cols-2 flex flex-col gap-10">
+        <section className="md:grid md:grid-cols-2  flex flex-col gap-10">
           {articles !== null &&
             Object.keys(articles).map((article) => (
               <ArticleItemList

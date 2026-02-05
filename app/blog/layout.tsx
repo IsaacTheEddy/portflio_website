@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "../globals.css";
 import Link from "next/link";
+import "../globals.css";
 
 export default function Layout({
   children,
@@ -15,6 +15,7 @@ export default function Layout({
         </Link>
       </header>
       {children}
+      <div></div>
     </section>
   );
 }

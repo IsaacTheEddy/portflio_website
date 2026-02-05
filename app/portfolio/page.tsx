@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContentSection from "@/components/ContentSection";
 import ResumeSolo from "@/components/ResumeSolo";
+import { redirect } from "next/navigation";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -100,6 +101,14 @@ export default function Home() {
               className="text-white hover:text-gray-300"
             >
               Resumes
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => redirect("/blog")}
+              className=" border-l-2 pl-5 pr-5 border-white text-white hover:text-gray-300"
+            >
+              Blog
             </button>
           </li>
         </ul>

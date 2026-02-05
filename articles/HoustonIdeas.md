@@ -7,26 +7,6 @@ date: "02-03-2026"
 
 # Houston Ideas 
 
-## Spam in the chat
-
-## **Bars/ Night/StripClubs:**
-
-### All in downtown Houston, not all within walking distance of each other
-
-**Dome NightClub** \- [1720 Main St](https://maps.app.goo.gl/fbg8CPHALHPhXXBs9)	  
-**The Vaults Gentleman’s Club** \- [2618 Winrock Blvd](https://maps.app.goo.gl/1uKfSePnFXUePThf8)  
-**Zenaku** \- [410 Main St](https://maps.app.goo.gl/78TXJWw5CsuX9B3M8)	  
-**The Colorado Gentlemans Club** \- [6710 Southwest Fwy](https://maps.app.goo.gl/8p3epKhuXhAndToh8)  
-**Lone Star Saloon** \- [809 Pierce St](https://maps.app.goo.gl/xRY7eNCMTm1PrqYY7)		  
-**The Men’s Club of Houston** \- [3303 Sage Rd](https://maps.app.goo.gl/fXCcv9dWAcroBPKE7)  
-**Reserve 101** \- [1201 Caroline St STE 100](https://maps.app.goo.gl/Hrpp5Ex8xBQEN2GG8)		  
-**Chicas Locas** \-  [6440 Southwest Fwy](https://maps.app.goo.gl/EaudnFG5eagRyTmC7)  
-**The Dirt Bar** \- [1209 Caroline St](https://maps.app.goo.gl/rDjyqjFySEHe3zCB6)			  
-**Dean’s Downtown** \- [316 Main St](https://maps.google.com/)  
-**Captain Foxheart's Bad News Bar & Spirit Lodge** \- [308 Main St](https://maps.app.goo.gl/ebPdR67Bwd9uKjX17)  
-**Sekai** \- [1505 St Emanuel](https://maps.app.goo.gl/cJad83ob2vCXseBv5) (Google says $100 per person. We can rent a section $200 for 10 people, But bottle service and shit can cost)  
-**Dreams Bar and Lounge** \- [3321 Dixie Dr, Third ward](https://maps.app.goo.gl/5HdvWaZUdzitEzXF8)
-
 ## **Soul Food:**
 
 Day n Night \- [5101 Ameda Rd Houston](https://maps.app.goo.gl/1uKfSePnFXUePThf8)  
@@ -39,7 +19,7 @@ Gotta scroll more tictoc, Ironic its called tictoc when all you do is watch it w
 **Teppay** \-  [6516 Westheimer Rd A2](https://maps.app.goo.gl/AadJZ2Shj8uzsHxC7)  
 **Seiwa  Market (Grocery Store)** \- [1801 S Dairy Ashford Rd](https://maps.app.goo.gl/iiptdbFxHE9qKA5i8)  
 **Kyuuramen** \- [2920 Riverby Rd Suite 100](https://maps.app.goo.gl/ptU1MUjGuFzVqCWm6)  
-**Rice Box** \- [Fucking Sick restraunt](https://maps.app.goo.gl/vf2UkBrxuEf1DPNLA) (Isaac High Vote)
+**Rice Box** \- [Sick restraunt](https://maps.app.goo.gl/vf2UkBrxuEf1DPNLA) (Isaac High Vote)
 
 ## **Things to Do(Cost money):**
 
@@ -55,3 +35,18 @@ Gotta scroll more tictoc, Ironic its called tictoc when all you do is watch it w
 
 **Downtown Houston Tunnel** \- 909 Fannin St \#1650  
 **Smither Park**  
+
+
+## **Bars:**
+
+### All in downtown Houston, not all within walking distance of each other
+
+**Dome NightClub** \- [1720 Main St](https://maps.app.goo.gl/fbg8CPHALHPhXXBs9)	  
+**Zenaku** \- [410 Main St](https://maps.app.goo.gl/78TXJWw5CsuX9B3M8)	   
+**Lone Star Saloon** \- [809 Pierce St](https://maps.app.goo.gl/xRY7eNCMTm1PrqYY7)		  
+**Reserve 101** \- [1201 Caroline St STE 100](https://maps.app.goo.gl/Hrpp5Ex8xBQEN2GG8)		   
+**The Dirt Bar** \- [1209 Caroline St](https://maps.app.goo.gl/rDjyqjFySEHe3zCB6)			  
+**Dean’s Downtown** \- [316 Main St](https://maps.google.com/)  
+**Captain Foxheart's Bad News Bar & Spirit Lodge** \- [308 Main St](https://maps.app.goo.gl/ebPdR67Bwd9uKjX17)  
+**Sekai** \- [1505 St Emanuel](https://maps.app.goo.gl/cJad83ob2vCXseBv5) (Google says $100 per person. We can rent a section $200 for 10 people, But bottle service and can cost)  
+**Dreams Bar and Lounge** \- [3321 Dixie Dr, Third ward](https://maps.app.goo.gl/5HdvWaZUdzitEzXF8)
