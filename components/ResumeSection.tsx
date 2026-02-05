@@ -52,7 +52,7 @@ export default function ResumeChoice() {
             {resumes.map((resume, index) => (
               <div
                 key={index}
-                className="flex-[0_0_100%] min-w-0 flex flex-col md:flex-row items-center justify-around gap-16 px-4 md:px-12"
+                className="flex-[0_0_100%] min-w-0 flex-col md:flex-row items-center justify-around md:gap-16 px-4 md:px-12"
               >
                 {/* Title Section (Left) */}
                 <div className="w-full md:w-1/3 flex flex-col justify-center md:justify-end items-center text-white">

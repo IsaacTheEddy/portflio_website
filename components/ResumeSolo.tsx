@@ -9,13 +9,13 @@ const PDFViewer = dynamic(() => import("@/components/PDFViewer"), {
 
 export default function ResumeSolo() {
   const resume = {
-    title: "Full-Stack Web Developer",
-    file: "/Isaac Edwards Full-Stack Web Developer Resume.pdf",
-    text: "Full-stack web developer with a strong foundation in both front-end and back-end engineering",
+    title: "Full-Stack Web Engineer",
+    file: "/Isaac Edwards Updated Full-Stack Res.pdf",
+    text: "Full-stack web developer with a strong foundation in Data Analysis and Business Management.",
   };
   return (
     <>
-      <div className="flex flex-row items-center justify-center w-full p-10">
+      <div className="flex md:flex-row flex-col gap-y-5 items-center justify-center w-full p-10">
         {/* Title Section (Left) */}
         <div className="w-full md:w-1/3 flex flex-col justify-center md:justify-end items-center text-white">
           <h2 className="text-3xl font-bold text-center md:text-left md:text-5xl leading-tight">
@@ -27,7 +27,7 @@ export default function ResumeSolo() {
               href={resume.file}
               download={`Isaac Edwards ${resume.title.replace(
                 /\s+/g,
-                "_"
+                "_",
               )}.pdf`}
               className="rounded opacity-80 px-4 py-2  transition-colors  bg-gray-700 text-white hover:bg-gray-600"
               aria-label={`Download ${resume.title} Resume`}
