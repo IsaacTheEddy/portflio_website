@@ -29,8 +29,8 @@ body {
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-cormorantGarmond: var(--font-cormorant-garamond)
-  --font-poppins: var(--font-poppins)
+  --font-cormorantGarmond: var(--font-cormorant-garamond);
+  --font-poppins: var(--font-poppins);
 }
 
 @keyframes bounce-right {
