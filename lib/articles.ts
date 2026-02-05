@@ -3,7 +3,7 @@ import matter from "gray-matter"
 import path from "path"
 import moment from "moment"
 import { remark } from "remark"
-import html from "remark-html
+import html from "remark-html"
 
 import type {ArticleItem} from "../types"
 import { title } from "process"
@@ -54,4 +54,24 @@ export function getCatagorizedArticles(){
     })
 
     return catogrisedArticles
+}
+
+export async function getArticleData(id: string){
+    const fullPath = path.join(articleDirectory, `${id}.md`)
+    const fileContent = fs.readFileSync(fullPath, "utf-8")
+    const matterResult = matter(fileContent)
+    const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content)
+    
+    const htmlReady = processedContent.toString()
+    
+    return {
+        id, 
+        htmlReady,
+        title: matterResult.data.title,
+        category: matterResult.data.cattegory,
+        date: moment(matterResult.data.date, "DD-MM-YYYY").format("MMMM DD YYYY"),
+    }
+
 }

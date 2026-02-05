@@ -1,3 +1,4 @@
+import ArticleItemList from "@/components/ArticleListItem";
 import { getCatagorizedArticles } from "@/lib/articles";
 
 export default function Page() {
@@ -12,7 +13,16 @@ export default function Page() {
           {" "}
           minimal blog
         </h1>
-        <section className="md:grid md:grid-cols-2 flex flex-col gap-10"></section>
+        <section className="md:grid md:grid-cols-2 flex flex-col gap-10">
+          {articles !== null &&
+            Object.keys(articles).map((article) => (
+              <ArticleItemList
+                category={article}
+                articles={articles[article]}
+                key={article}
+              />
+            ))}
+        </section>
       </header>
     </section>
   );
