@@ -25,17 +25,17 @@ export default function Home() {
     }
   };
 
-  useGSAP(() => {
-    gsap.from(portfolioRef.current, {
-      yPercent: 100,
-      duration: 1,
-      scrollTrigger: {
-        trigger: missionSectionRef.current,
-        start: "bottom center",
-        toggleActions: "play none none none",
-      },
-    });
-  }, []);
+  //   useGSAP(() => {
+  //     gsap.from(portfolioRef.current, {
+  //       yPercent: 100,
+  //       duration: 1,
+  //       scrollTrigger: {
+  //         trigger: missionSectionRef.current,
+  //         start: "bottom center",
+  //         toggleActions: "play none none none",
+  //       },
+  //     });
+  //   }, []);
 
   return (
     <>

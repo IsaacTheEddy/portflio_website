@@ -10,16 +10,16 @@ export default async function Article({
   const article = await getArticleData(params.slug);
 
   return (
-    <section className="mx-auto w-10/12 md:w-1/2 mt-20 flex flex-col gap-5 text-black">
-      <div className="flex justify-between">
-        <Link href={"/blog"} className="flex items-center gap-2">
-          <ArrowLeftIcon className="h-6 w-6" />
-          <p>Back Home</p>
+    <section className="h-full mx-auto w-10/12 md:w-11/12 mt-20 flex flex-col gap-5 text-black">
+      <div className="flex justify-between items-center">
+        <Link href={"/blog"} className="flex gap-3">
+          <ArrowLeftIcon className="back-arrow h-6 w-6 my-auto " />
+          <p className="md:text-2xl">Back Home</p>
         </Link>
-        <p>{article.date.toString()}</p>
+        <p className="md:text-2xl">{article.date.toString()}</p>
       </div>
       <article
-        className="article"
+        className="article md:mt-15 md:w-[80%] md:mx-auto"
         dangerouslySetInnerHTML={{ __html: article.htmlReady }}
       />
     </section>

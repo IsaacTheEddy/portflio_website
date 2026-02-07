@@ -7,14 +7,13 @@ export default function Page() {
   console.log(articles);
 
   return (
-    <section className=" font-cormorantGarmond mx-auto w-11/12 md:w-1/2 mt-20 flex flex-col gap-16 mb-20 ">
-      <div></div>
-      <header className="">
-        <h1 className="font-light text-6xl text-neutral-900 text center mb-5">
+    <>
+      <div className="flex flex-col h-screen">
+        <h1 className="font-light text-6xl text-center text-neutral-900 my-15 ">
           {" "}
-          Under Construction
+          Thought Pit
         </h1>
-        <section className="md:grid md:grid-cols-2  flex flex-col gap-10">
+        <section className="md:grid md:grid-cols-2 place-items-center flex flex-col ">
           {articles !== null &&
             Object.keys(articles).map((article) => (
               <ArticleItemList
@@ -24,7 +23,7 @@ export default function Page() {
               />
             ))}
         </section>
-      </header>
-    </section>
+      </div>
+    </>
   );
 }
