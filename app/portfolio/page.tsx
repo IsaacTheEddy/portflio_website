@@ -48,12 +48,15 @@ export default function Home() {
       </div>
       {/* Who Section */}
       <ContentSection title="Full-Stack Developer" imageUrl={IsaacPic.src}>
-        Full-stack developer with a strong foundation in both Front-end and
-        Back-end engineering. Proven ability to build scalable applications,
-        design and craft efficient RESTful APIs, and manage complex database
-        operations. Eager to join a collaborative team to contribute, learn, and
-        grow while delivering impactful solutions across the entire technology
-        stack.
+        Full-stack developer with a strong foundation in both Front-end/Back-end
+        Development. Proven ability to build scalable applications, design and
+        craft efficient RESTful APIs, and manage complex database operations,
+        While also striving to integrate high performance and robust codebases.
+        Eager to join a collaborative team to contribute and solve issues to
+        make a more productive and efficient product. Seeking a collaborative
+        environment to contribute expertise in problem-solving, thereby
+        fostering a more productive and efficient product.e delivering impactful
+        solutions across the entire technology stack.
       </ContentSection>
       {/* Certifications and Diplomas */}
       <section id="CertsAndDips"></section>

@@ -16,23 +16,30 @@ export default function ContentSection({
   const flexDirection = reverse ? "flex-row-reverse" : "flex-row";
 
   return (
-    <section className="flex h-screen items-center justify-center w-full ">
-      <div>
+    <section className=" h-screen ">
+      <div className="grid grid-col-1 md:mx-25 lg:mx-75 mx-10 opacity-95 px-8 py-10 bg-gray-800 rounded-4xl md: ">
         <h2 className="mt-5 mx-15 text-3xl font-bold mb-4 ">{title}</h2>
-        <div
-          className={`flex flex-col md:flex md:flex-row items-center justify-center mx-15 md:gap-50  opacity-95 bg-gray-800 rounded-4xl`}
-        >
-          <div className="flex md:flex-row flex-col md:w-1/2 p-8 md:gap-x-10 rounded-2xl text-white">
-            <Image
-              src={imageUrl}
-              alt={title}
-              width={500}
-              height={500}
-              className="rounded-3xl p-8 flex items-center justify-center"
-            />
-            <p>{children}</p>
-          </div>
+        <div className="grid md:grid-cols-2 place-items-start md:rounded-2xl text-white">
+          <Image
+            src={imageUrl}
+            alt={title}
+            width={400}
+            height={500}
+            className="rounded-3xl p-8 "
+          />
+          <p className="text-xl/loose">{children}</p>
         </div>
+        {/* <div className="md: md:w-1/2 p-8 md:gap-x-10 rounded-2xl text-white">
+          <h2 className="mt-5 mx-15 text-3xl font-bold mb-4 ">{title}</h2>
+          <Image
+            src={imageUrl}
+            alt={title}
+            width={500}
+            height={500}
+            className="rounded-3xl p-8 "
+          />
+          <p>{children}</p>
+        </div> */}
       </div>
     </section>
   );
