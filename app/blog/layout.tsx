@@ -9,7 +9,7 @@ export default function Layout({
 }>) {
   return (
     <>
-      <section className="h-auto flex flex-col bg-Banana-Mania font-cormorantGarmond">
+      <section className="h-auto flex flex-col bg-Banana-Mania bg-linear-to-b from-Banana-Mania to-Tan font-cormorantGarmond">
         <div className=" ">{children}</div>
       </section>
       <div>
