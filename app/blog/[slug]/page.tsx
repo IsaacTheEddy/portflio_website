@@ -19,7 +19,7 @@ export default async function Article({
         <p className="md:text-2xl">{article.date.toString()}</p>
       </div>
       <article
-        className="article md:mt-15 md:w-[80%] md:mx-auto"
+        className="article overflow-hidden md:w-[80%] md:mx-auto"
         dangerouslySetInnerHTML={{ __html: article.htmlReady }}
       />
     </section>
