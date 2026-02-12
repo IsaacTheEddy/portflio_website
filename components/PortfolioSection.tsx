@@ -9,6 +9,7 @@ import SmileSchool from "@/public/assets/Smile_School.png";
 import RockAndRoll from "@/public/assets/Rock_And_Roll.png";
 import AtlasCinemaVid from "@/public/assets/videos/Cinema_Guru.mp4";
 import AtlasMusicPlayerVid from "@/public/assets/videos/Atlas_Music_Player_Vid.mp4";
+import WurdoPic from "@/public/assets/WurdoLogo.png"
 
 const MusicLink = "https://gilded-granita-cb7364.netlify.app/";
 const SmileSchoolLink =
@@ -57,6 +58,40 @@ export default function Portfolio() {
         <div className="overflow-hidden" ref={emblaRef}>
           {/* EMBLA CONTAINER */}
           <div className="flex gap-6">
+             {/* SLIDE 0 [Wurdo] */}
+            <div className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_50%] min-w-0 flex justify-center">
+              <VerticalCard
+                img={WurdoPic.src}
+                title="Wurdo ( WIP )"
+                link="https://wurdo-testing.vercel.app/"
+                isVideo = {false}
+              >
+                Wurdo is a word game unlike any other. Using machine learning we created a system that 
+                can generate infinite unique words in a word ladder puzzle. It includes a scoring system
+                based on the difficulty of the word and the rarity of the word. You can score using an anagram, 
+                changing one letter of the previous word
+                or rhyming with the previous word. 
+                <br></br>
+                
+                <br></br>
+                How high can you go?
+                {/* <ul>
+                  <li className="">
+                    <b>Next.js 15 and React 19:</b> Developed with the latest
+                    versions of these leading web development frameworks,
+                    demonstrating the developer's commitment to staying
+                  </li>
+                  <li className="">
+                    <b>NextAuth.js v5:</b> Implements robust authentication,
+                    allowing users to seamlessly sign in with their GitHub
+                    accounts and access personalized movie lists.
+                  </li>
+                  <li className="">
+                    <b>Machine Learning: </b> 
+                  </li>
+                </ul> */}
+              </VerticalCard>
+            </div>
             {/* SLIDE 1 [Cinema Guru] */}
             <div className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_50%] min-w-0 flex justify-center">
               <VerticalCard
