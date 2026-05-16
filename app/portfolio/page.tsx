@@ -72,7 +72,7 @@ export default function Home() {
       </section>
 
       {/* Floating Bottom Navigation Bar */}
-      <nav className="fixed md:bottom-4 md:left-1/2 md:top-[90%] md:pt-5 top-1/2 w-fit p-2.5 rounded-2xl right-0 mr-auto text-center md:text-left md:w-fit md:rounded-full  md:-translate-x-1/2 md:p-4 opacity-80 bg-gray-800  shadow-2xl z-50 md:block">
+      <nav className="fixed  md:left-1/2 md:top-[90%] md:pt-5 top-1/2 w-fit p-2.5 rounded-2xl right-0 mr-auto text-center md:text-left md:w-fit md:rounded-full  md:-translate-x-1/2 md:p-4 opacity-80 bg-gray-800  shadow-2xl z-50 md:block">
         <ul className="flex flex-col md:flex-row space-y-8 md:space-x-4 md:space-y-0">
           <li>
             <button
