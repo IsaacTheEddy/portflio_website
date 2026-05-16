@@ -18,11 +18,11 @@ export default function ResumeSolo() {
       <div className="flex md:flex-row flex-col gap-y-5 items-center justify-center w-full p-10">
         {/* Title Section (Left) */}
         <div className="w-full md:w-1/3 flex flex-col justify-center md:justify-end items-center text-white">
-          <h2 className="text-3xl font-bold text-center md:text-left md:text-5xl leading-tight">
+          <h2 className="text-3xl font-bold text-center md:text-left md:text-5xl leading-tight z-1">
             {resume.title}
           </h2>
-          <p className="mt-2 text-center md:text-left">{resume.text}</p>
-          <div className="mt-4">
+          <p className="mt-2 text-center md:text-left z-1">{resume.text}</p>
+          <div className="mt-4 z-1">
             <a
               href={resume.file}
               download={`Isaac Edwards ${resume.title.replace(

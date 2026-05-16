@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import Background from "@/components/Background";
 import { MouseContextProvider } from "@/components/MouseContext";
+import DualCirclesBG from "@/components/DualCirclesBG";
 
 export const metadata: Metadata = {
   title: "Isaac Edwards Portfolio Page",
@@ -14,10 +15,9 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <section>
-      <MouseContextProvider>
-        <Background>{children}</Background>
-      </MouseContextProvider>
-    </section>
+    <div className="relative"> 
+      <DualCirclesBG />
+       {children}
+    </div>   
   );
 }

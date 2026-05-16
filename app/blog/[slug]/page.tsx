@@ -10,7 +10,7 @@ export default async function Article({
   const article = await getArticleData(params.slug);
 
   return (
-    <section className="h-auto mx-auto w-10/12 md:w-11/12 mt-20 flex flex-col gap-5 text-black">
+    <section className="h-auto min-h-screen mx-auto w-10/12 md:w-11/12 mt-20 flex flex-col gap-5 text-accent-neo font-inter">
       <div className="flex justify-between items-center">
         <Link href={"/blog"} className="flex gap-3">
           <ArrowLeftIcon className="back-arrow h-6 w-6 my-auto " />

@@ -17,4 +17,7 @@ My main role on this project was backend development. I was responsible for crea
 
 If you like word games, then welcome to your new addiction.
 
-Check it out here: [WURDO](https://wurdo-testing.vercel.app/)
+Check it out here: [WURDO](https://wurdo-testing.vercel.app/) 
+
+# As of 5/15/2026
+The project has been put on Hiatus!! Running servers are expensive, and I was running it out of pocket. Its not gone just gonna take a break while I figure out a way to make it profitable or at least make some money off of it.

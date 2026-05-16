@@ -5,11 +5,11 @@ import "highlight.js/styles/github-dark.css";
 import Background from "@/components/Background";
 import { MouseContextProvider } from "@/components/MouseContext";
 
-import { Cormorant_Garamond, Poppins } from "next/font/google";
+import { Cormorant_Garamond, Poppins, Playfair_Display, Inter } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-cormorant-garamond",
+  variable: "--font-cormorantGaramond",
   weight: ["400", "700"],
 });
 
@@ -19,15 +19,19 @@ const poppins = Poppins({
   weight: ["400", "700"],
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
+  variable: "--font-playfairDisplay",
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "700"],
 });
+
+
 
 export const metadata: Metadata = {
   title: "Isaac Edwards Home Page",
@@ -42,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${cormorant.variable}antialiased`}
+        className={`${poppins.variable} ${cormorant.variable} ${playfairDisplay.variable} ${inter.variable} antialiased`}
       >
         {children}
       </body>

@@ -9,10 +9,10 @@ export default function Page() {
   return (
     <>
     <div className="flex flex-col min-h-screen container mx-auto px-4 py-20">
-      <h1 className="blog-title font-light color-black text-6xl md:text-8xl text-center text-neutral-900 mb-20 tracking-tight">
+      <h1 className="blog-title font-light color-black text-6xl md:text-8xl text-center mb-20 tracking-tight text-accent-neo">
         Thought Pit
       </h1>
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-start w-full max-w-7xl mx-auto">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-start w-full max-w-7xl mx-auto text-accent-neo">
         {articles !== null &&
           Object.keys(articles).map((article) => (
             <ArticleItemList

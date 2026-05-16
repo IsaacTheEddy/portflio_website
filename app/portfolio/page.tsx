@@ -38,13 +38,13 @@ export default function Home() {
   //   }, []);
 
   return (
-    <>
-      <div
-        id="home"
-        className="h-screen flex flex-col items-center justify-center text-white"
-      >
-        <h1 className="text-5xl font-bold">Isaac Edwards</h1>
-        <p className="text-2xl mt-4">Full-Stack Web Developer</p>
+
+    <div className="bg-background-neo">
+    {/* Hero Section */}
+    <section id="home"></section>
+      <div className="h-screen flex flex-col items-center justify-center text-accent-neo">
+        <h1 className="text-8xl font-bold font-playfairDisplay z-1">Isaac Edwards</h1>
+        <p className="text-2xl mt-4 font-inter z-1">Full-Stack Web Developer X Data Analyst</p>
       </div>
       {/* Who Section */}
       <ContentSection title="Full-Stack Developer" imageUrl={IsaacPic.src}>
@@ -67,13 +67,13 @@ export default function Home() {
         </div>
       </section>
       {/* Resume */}
-      <section id="resume" className="pt-10 ">
+      <section id="resume" className="pt-10 font-inter ">
         <ResumeSolo />
       </section>
 
       {/* Floating Bottom Navigation Bar */}
-      <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 p-4 opacity-80 bg-gray-800 rounded-full shadow-2xl z-50 hidden md:block">
-        <ul className="flex space-x-4">
+      <nav className="fixed md:bottom-4 md:left-1/2 md:top-[90%] md:pt-5 top-1/2 w-fit p-2.5 rounded-2xl right-0 mr-auto text-center md:text-left md:w-fit md:rounded-full  md:-translate-x-1/2 md:p-4 opacity-80 bg-gray-800  shadow-2xl z-50 md:block">
+        <ul className="flex flex-col md:flex-row space-y-8 md:space-x-4 md:space-y-0">
           <li>
             <button
               onClick={() => scrollToSection("home")}
@@ -109,13 +109,13 @@ export default function Home() {
           <li>
             <button
               onClick={() => redirect("/blog")}
-              className=" border-l-2 pl-5 pr-5 border-white text-white hover:text-gray-300"
+              className=" md:border-l-2 md:pl-5 md:pr-5 md:border-t-0 md:pt-0 border-t-2 pt-4  border-accent-neo text-accent-neo hover:text-gray-300"
             >
               Blog
             </button>
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   );
 }

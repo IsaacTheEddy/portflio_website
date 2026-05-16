@@ -31,18 +31,18 @@ export default function ShimmerButton({ children }: ShimmerButtonProps) {
 
   return (
     // Main container to center the button on the page
-    <div className="flex items-center justify-center font-sans">
+    <div className="flex items-center justify-center">
       <style>{customCss}</style>
-      <button className="relative inline-flex items-center justify-center p-[1.5px] bg-gray-300 dark:bg-black rounded-full overflow-hidden group">
+      <button className="relative inline-flex items-center justify-center p-[1.5px] bg-accent-neo rounded-full overflow-hidden group">
         <div
           className="absolute inset-0"
           style={{
             background:
-              "conic-gradient(from var(--angle), transparent 25%, #06b6d4, transparent 50%)",
+              "conic-gradient(from var(--angle), transparent 25%, #908787, transparent 50%)",
             animation: "shimmer-spin 2.5s linear infinite",
           }}
         />
-        <span className="relative z-10 inline-flex items-center justify-center w-full h-full px-8 py-3 text-gray-900 dark:text-white bg-white dark:bg-gray-900 rounded-full group-hover:bg-gray-100 dark:group-hover:bg-gray-800 transition-colors duration-300">
+        <span className="relative font-inter z-10 inline-flex items-center justify-center w-full h-full px-8 py-3 text-gray-900 dark:text-white bg-accent-soft-neo rounded-full group-hover:bg-gray-100 dark:group-hover:bg-gray-800 transition-colors duration-300">
           {children}
         </span>
       </button>
