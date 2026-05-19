@@ -1,6 +1,6 @@
 import ArticleItemList from "@/components/ArticleListItem";
 import { getCatagorizedArticles } from "@/lib/articles";
-import { redirect } from "next/navigation";
+import Link from "next/link";
 
 export default function Page() {
   const articles = getCatagorizedArticles();
@@ -22,6 +22,21 @@ export default function Page() {
             />
           ))}
       </section>
+       <div>
+        <nav className="fixed  md:left-1/2 md:top-[90%] md:pt-5 top-[5%] w-fit p-2.5 rounded-2xl right-0 mr-auto text-center md:text-left md:w-fit md:rounded-full  md:-translate-x-1/2 md:p-4 opacity-80 bg-gray-800  shadow-2xl z-50 md:block">
+          <div className="flex space-x-4 font-inter">
+            <Link href={"/"} className="text-accent-neo hover:text-accent-hard-neo text-lg">
+              Home
+            </Link>
+            <Link
+              href={"/portfolio"}
+              className="text-accent-neo hover:text-accent-hard-neo text-lg"
+            >
+              Portfolio
+            </Link>
+          </div>
+        </nav>
+      </div>
     </div>
     </>
   );

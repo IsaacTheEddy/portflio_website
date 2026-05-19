@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${cormorant.variable} ${playfairDisplay.variable} ${inter.variable} antialiased`}
+        className={`${poppins.variable} ${cormorant.variable} ${playfairDisplay.variable} ${inter.variable} antialiased `}
       >
         {children}
       </body>

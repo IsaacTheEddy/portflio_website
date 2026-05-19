@@ -12,21 +12,6 @@ export default function Layout({
       <section className="h-auto flex flex-col bg-background-neo bg-linear-to-b from-background-neo to-accent-soft-neo font-playfairDisplay">
         <div className=" ">{children}</div>
       </section>
-      <div>
-        <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 p-4 opacity-80 bg-background-neo rounded-full shadow-2xl z-50 hidden md:block">
-          <div className="flex space-x-4 font-inter">
-            <Link href={"/"} className="text-accent-neo hover:text-accent-hard-neo text-lg">
-              Home
-            </Link>
-            <Link
-              href={"/portfolio"}
-              className="text-accent-neo hover:text-accent-hard-neo text-lg"
-            >
-              Portfolio
-            </Link>
-          </div>
-        </nav>
-      </div>
     </>
   );
 }

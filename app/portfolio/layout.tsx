@@ -15,7 +15,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="relative"> 
+    <div className="relative "> 
       <DualCirclesBG />
        {children}
     </div>   
