@@ -5,7 +5,7 @@ category: "Web Development"
 ---
 
 # News!
-I'm actually super excited as write this at 4:38 AM on a Thursday morning with spongebob floating on my computer screen!!! I can finally say that Wurdo is now live on Vercel! After months of hard work and a few all nighters, We have something to show the world. Wurdo is a word game unlike any other. Using machine learning we created a system that 
+I'm actually super excited as I write this at 4:38 AM on a Thursday morning with spongebob floating on my computer screen!!! I finally can say that Wurdo is now live! After months of hard work and a few all nighters, We have something to show the world. Wurdo is a word game unlike any other. Using machine learning we created a system that 
 can generate infinite unique words in a word ladder puzzle. It includes a scoring system
 based on the difficulty of the word and the rarity of the word. You can score using an anagram, 
 changing one letter of the previous word
