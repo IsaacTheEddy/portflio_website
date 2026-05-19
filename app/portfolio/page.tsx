@@ -5,6 +5,7 @@ import IsaacPic from "@/public/assets/Isaac_Edwards_1_Formatted.jpg";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Link from "next/link";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContentSection from "@/components/ContentSection";
 import ResumeSolo from "@/components/ResumeSolo";
@@ -79,21 +80,21 @@ export default function Home() {
       <nav className="fixed  md:left-1/2 md:top-[90%] md:pt-5 top-[5%] w-fit p-2.5 rounded-2xl right-0 mr-auto text-center md:text-left md:w-fit md:rounded-full  md:-translate-x-1/2 md:p-4 opacity-80 bg-gray-800  shadow-2xl z-50 md:block">
         <ul className="flex flex-col md:flex-row space-y-8 md:space-x-4 md:space-y-0">
           <li>
+            <Link
+              href={"/"}
+              className="text-white hover:text-gray-300"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
             <button
               onClick={() => scrollToSection("home")}
               className="text-white hover:text-gray-300"
             >
-              Home
+             About me
             </button>
           </li>
-          {/* <li>
-            <button
-              onClick={() => scrollToSection("CertsAndDips")}
-              className="text-white hover:text-gray-300"
-            >
-              Certs and Dips
-            </button>
-          </li> */}
           <li>
             <button
               onClick={() => scrollToSection("portfolio")}
