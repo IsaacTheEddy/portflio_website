@@ -26,7 +26,7 @@ export const DualCirclesBG = () => {
 
   return (
     <div
-      className="fixed inset-0  w-full h-full overflow-hidden transition-transform duration-300 ease-out"
+      className="fixed inset-0 -z-10 pointer-events-none w-full h-full overflow-hidden transition-transform duration-300 ease-out"
       style={{
         backgroundImage: `
           linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transperant 1px),

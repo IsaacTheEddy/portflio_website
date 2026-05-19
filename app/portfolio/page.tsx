@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContentSection from "@/components/ContentSection";
 import ResumeSolo from "@/components/ResumeSolo";
+import FooterSocials from "@/components/FooterSocials";
 import { redirect } from "next/navigation";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -39,7 +40,7 @@ export default function Home() {
 
   return (
 
-    <div className="bg-background-neo">
+    <div>
     {/* Hero Section */}
     <section id="home"></section>
       <div className="h-screen flex flex-col items-center justify-center text-accent-neo">
@@ -69,6 +70,9 @@ export default function Home() {
       {/* Resume */}
       <section id="resume" className="pt-10 font-inter ">
         <ResumeSolo />
+      </section>
+      <section id="footer">
+        <FooterSocials />
       </section>
 
       {/* Floating Bottom Navigation Bar */}

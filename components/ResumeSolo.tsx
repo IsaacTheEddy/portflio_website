@@ -39,7 +39,7 @@ export default function ResumeSolo() {
 
         {/* PDF Section (Right) */}
         <div className="w-full md:w-2/3 ">
-          <div className="w-full max-w-4xl shadow-lg flex flex-col justify-center md:justify-end items-end">
+          <div className="w-full max-w-4xl flex flex-col justify-center md:justify-end items-end">
             <PDFViewer file={resume.file} />
           </div>
         </div>
