@@ -9,7 +9,8 @@ import SmileSchool from "@/public/assets/Smile_School.png";
 import RockAndRoll from "@/public/assets/Rock_And_Roll.png";
 import AtlasCinemaVid from "@/public/assets/videos/Cinema_Guru.mp4";
 import AtlasMusicPlayerVid from "@/public/assets/videos/Atlas_Music_Player_Vid.mp4";
-import WurdoPic from "@/public/assets/WurdoLogo.png"
+import WurdoPic from "@/public/assets/WurdoLogo.png";
+import Link from "next/link";
 
 const MusicLink = "https://gilded-granita-cb7364.netlify.app/";
 const SmileSchoolLink =
@@ -58,21 +59,41 @@ export default function Portfolio() {
         <div className="overflow-hidden" ref={emblaRef}>
           {/* EMBLA CONTAINER */}
           <div className="flex gap-6">
-             {/* SLIDE 0 [Wurdo] */}
+            {/* SLIDE 0 [Wurdo] */}
             <div className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_50%] min-w-0 flex justify-center">
               <VerticalCard
                 img={WurdoPic.src}
                 title="Wurdo ( WIP )"
                 link="https://wurdo-testing.vercel.app/"
-                isVideo = {false}
+                isVideo={false}
               >
-                Wurdo is a word game unlike any other. Using machine learning we created a system that 
-                can generate infinite unique words in a word ladder puzzle. It includes a scoring system
-                based on the difficulty of the word and the rarity of the word. You can score using an anagram, 
-                changing one letter of the previous word
-                or rhyming with the previous word. 
+                <p>
+                  <span className="text-red-50">
+                    {" "}
+                    Orignally developed for a school Capston in under 2 weeks. A
+                    team of 5 developed this games. It is still a work in
+                    progress. Currently Servers are unavalible.{" "}
+                    <Link
+                      href={`/` + "blog/WurdoDeployed"}
+                      className="text-red-500"
+                    >
+                      Cick Here
+                    </Link>{" "}
+                    to find out more
+                  </span>{" "}
+                </p>
+                <br />
+                <br />
+                <p>
+                  {" "}
+                  Wurdo is a word game unlike any other. Using machine learning
+                  we created a system that can generate infinite unique words in
+                  a word ladder puzzle. It includes a scoring system based on
+                  the difficulty of the word and the rarity of the word. You can
+                  score using an anagram, changing one letter of the previous
+                  word or rhyming with the previous word.
+                </p>
                 <br></br>
-                
                 <br></br>
                 How high can you go?
                 {/* <ul>
@@ -101,30 +122,27 @@ export default function Portfolio() {
                 link="https://atlas-cinema-guru-inky.vercel.app/"
                 mute={true}
               >
-                This is a modern web application built with a Next.js frontend
-                and backend, utilizing a Vercel Postgres database. This
-                application empowers users to browse and manage a comprehensive
-                list of movies, offering features such as filtering by genre and
-                release year, adding movies to personalized favorite and "watch
-                later" lists, and tracking recent activity.
+                This web application was built with a Next.js frontend and
+                backend, utilizing a Vercel Postgres database. While limited in
+                scope and time.
                 <br></br>
                 <br></br>
                 <ul>
                   <li className="">
-                    <b>Next.js 15 and React 19:</b> Developed with the latest
-                    versions of these leading web development frameworks,
-                    demonstrating the developer's commitment to staying
+                    <b>Next.js 15 and React 19:</b> Developed With Next.js for
+                    file-based routing to decrease reliance on static routing
+                    expressions. And React for quick and reusable component
+                    development.
                   </li>
                   <li className="">
-                    <b>NextAuth.js v5:</b> Implements robust authentication,
-                    allowing users to seamlessly sign in with their GitHub
-                    accounts and access personalized movie lists.
+                    <b>NextAuth.js v5:</b> Implements a simple authentication,
+                    allowing users to sign in with GitHub.
                   </li>
                   <li className="">
                     <b>Vercel Postgres and Kysely: </b>Leverages Vercel
-                    Postgres, a user-friendly serverless database, in
-                    conjunction with Kysely, a type-safe SQL query builder that
-                    enhances security by preventing SQL injection attacks.
+                    Postgres, a user-friendly serverless database. The movies,
+                    the user specific saved lists, and user actvity are all
+                    saved and stored in the database for a seamless experience.
                   </li>
                 </ul>
               </VerticalCard>
@@ -138,32 +156,26 @@ export default function Portfolio() {
                 video={AtlasMusicPlayerVid}
                 link={MusicLink}
               >
-                Welcome to the Atlas Music Player project. This application was
-                developed to demonstrate core front-end engineering skills
-                through the construction of a simple, clean, and highly
-                responsive music playback interface. The project emphasizes
-                functional, component-based architecture and modern development
-                tooling.
+                Atlas Music Player project. This application was developed to
+                demonstrate core front-end engineering skills through the
+                construction of a simple, clean, music playback interface.
                 <br></br>
                 <br></br>
                 <ul>
                   <li>
-                    <b>React:</b> Utilized this popular library to construct the
-                    user interface. Its component-based architecture was
-                    leveraged to ensure the codebase is modular, organized, and
-                    highly reusable.
+                    <b>React:</b> Utilized this library to construct the user
+                    interface. Its component-based architecture made it so the
+                    codebase is modular, organized, and highly reusable.
                   </li>
                   <li>
-                    <b>Vite & TypeScript:</b> The build process was handled by
-                    Vite, chosen for its speed and smooth development
-                    experience. TypeScript was implemented across the project to
-                    maintain code quality, enhance collaboration, and
+                    <b>TypeScript:</b>TypeScript was implemented across the
+                    project to maintain code quality, manage complexities, and
                     proactively catch bugs.
                   </li>
                   <li>
-                    <b>JSON-based Data Management:</b> The playlist information
-                    is managed using a simple and effective JSON file. This data
-                    is accessed and integrated into the application using
+                    <b>JSON Data Management:</b> The playlist information is
+                    managed using a simple and effective JSON file. This data is
+                    accessed and integrated into the application using
                     asynchronous fetching, ensuring efficient loading of the
                     music catalog.
                   </li>
@@ -178,11 +190,10 @@ export default function Portfolio() {
                 link={SmileSchoolLink}
                 isVideo={false}
               >
-                This Smile School project. This application was developed to
-                demonstrate core front-end engineering skills through the
-                construction of a simple, clean, and robust use of responsive
-                design. The project emphasizes UI design through base styling
-                and layout.
+                This is my Smile School project. This application was developed
+                to demonstrate core front-end engineering skills through the
+                construction of a simple, clean, and robust use of CSS/HTML. The
+                project emphasizes UI design through base styling and layout.
                 <br></br>
                 <br></br>
                 <ul>
@@ -206,12 +217,12 @@ export default function Portfolio() {
                 link={RockAndRollLink}
                 isVideo={false}
               >
-                This is a fun website I made using HTML/CSS and Bootstrap. This
-                was a project to practice using the Bootstrap framework for
-                styling and UI. The mock content was staged as an Excavation
-                Company that specilizes in collecting and selling various rocks.
-                Featuring actual rock knowledge the links in the footer are
-                hilarous and should not be overlooked.
+                This is my favorite mocksite I've ever made. Using HTML/CSS and
+                Bootstrap, This was a project to practice using the Bootstrap
+                framework for styling and UI. The mock content was staged as an
+                Excavation Company that specilizes in collecting and selling
+                various rocks. Featuring actual rock knowledge the links in the
+                footer are hilarous and should not be overlooked.
                 <br></br>
                 <br></br>
                 <ul>

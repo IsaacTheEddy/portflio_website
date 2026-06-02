@@ -22,11 +22,11 @@ export default function VerticalCard({
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
-    <div className=" flex flex-col h-fit w-lg border rounded-t-lg rounded-lg shadow-sm bg-gray-800 border-gray-700 ">
+    <div className=" flex flex-col h-fit w-sm border rounded-t-lg rounded-lg shadow-sm bg-gray-800 border-gray-700 ">
       {isVideo == true ? (
         <Video
           ref={videoRef}
-          className=" max-w-lg"
+          className=" max-w-md"
           src={video}
           poster={img}
           muted={mute}

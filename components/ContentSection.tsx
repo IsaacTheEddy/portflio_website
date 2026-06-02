@@ -18,8 +18,10 @@ export default function ContentSection({
   return (
     <section className=" h-auto mb-20 font-inter ">
       <div className="grid grid-col-1 md:mx-25 lg:mx-75 mx-10 opacity-95 px-8 py-10 bg-gray-800 rounded-4xl md: ">
-        <h2 className="mt-5 mx-15 text-3xl font-bold mb-4 ">{title}</h2>
-        <div className="grid md:grid-cols-2 place-items-start md:rounded-2xl text-white">
+        <h2 className="mt-5 mx-15 text-2xl font-bold mb-4 text-accent-neo ">
+          {title}
+        </h2>
+        <div className="grid md:grid-cols-2 place-items-start md:rounded-2xl text-accent-neo">
           <Image
             src={imageUrl}
             alt={title}
@@ -27,7 +29,7 @@ export default function ContentSection({
             height={500}
             className="rounded-3xl p-8 "
           />
-          <p className="text-xl/loose">{children}</p>
+          <p className="text-l/loose">{children}</p>
         </div>
         {/* <div className="md: md:w-1/2 p-8 md:gap-x-10 rounded-2xl text-white">
           <h2 className="mt-5 mx-15 text-3xl font-bold mb-4 ">{title}</h2>
