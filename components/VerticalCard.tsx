@@ -1,73 +1,65 @@
-import { useRef, useState } from "react";
-import Video from "next-video";
+import React from "react";
+
+interface VerticalCardProps {
+  children: React.ReactNode;
+  img: string;
+  title: string;
+  link: string;
+  category?: string;
+  onClick?: () => void;
+}
 
 export default function VerticalCard({
   children,
   img,
   title,
-  video,
   link,
-  mute,
-  isVideo = true,
-}: {
-  children: React.ReactNode;
-  img: string;
-  title: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  video?: any;
-  link: string;
-  mute?: boolean;
-  isVideo?: boolean;
-}) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
+  category = "Project",
+  onClick,
+}: VerticalCardProps) {
   return (
-    <div className=" flex flex-col h-fit w-sm border rounded-t-lg rounded-lg shadow-sm bg-gray-800 border-gray-700 ">
-      {isVideo == true ? (
-        <Video
-          ref={videoRef}
-          className=" max-w-md"
-          src={video}
-          poster={img}
-          muted={mute}
-          loop
-          playsInline
+    <div
+      onClick={onClick}
+      className="group flex flex-col h-full w-full border rounded-xl overflow-hidden shadow-md bg-gray-900/50
+       border-gray-700/50 backdrop-blur-md transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-500 
+       cursor-pointer"
+    >
+      {/* Image container */}
+      <div className="relative aspect-video w-full overflow-hidden bg-gray-800">
+        <img
+          src={img}
+          alt={title}
+          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
         />
-      ) : (
-        <div>
-          <img src={img} alt="" />
+        <div className="absolute top-4 left-4">
+          <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 backdrop-blur-md">
+            {category}
+          </span>
         </div>
-      )}
-      <div className="p-5">
-        <a href="#">
-          <h5 className="mb-2 font-bold tracking-tight  dark:text-white">
-            {title}
-          </h5>
-        </a>
-        <div className="mb-3 font-normal text-gray-400">{children}</div>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
+      </div>
+
+      {/* Content container */}
+      <div className="flex flex-col grow p-6 text-left">
+        <h3 className="text-xl font-bold tracking-tight text-white mb-3 group-hover:text-blue-400 transition-colors">
           {title}
-          <svg
-            className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
+        </h3>
+        <div className="text-gray-400 font-normal text-sm line-clamp-3 mb-6 grow">
+          {children}
+        </div>
+        <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-800">
+          <span className="text-xs font-semibold text-blue-400 group-hover:underline">
+            View Details &rarr;
+          </span>
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()} // Prevent card click trigger
+            className="inline-flex items-center px-4 py-2 text-xs font-semibold text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors focus:ring-4 focus:outline-none focus:ring-blue-800"
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </a>
+            Launch Project
+          </a>
+        </div>
       </div>
     </div>
   );

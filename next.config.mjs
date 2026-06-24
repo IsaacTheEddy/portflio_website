@@ -1,11 +1,16 @@
-import { withNextVideo } from 'next-video/process';
 
-/** @type {import('next').NextConfig} */
+import createMDX from "@next/mdx"
+
+const withMdx = createMDX({
+    extension: /\.mdx?$/,
+})
+
 const nextConfig = {
-  webpack: (config) => {
-    config.resolve.alias.canvas = false;
-    return config;
-  },
+    webpack: (config) => {
+        config.resolve.alias.canvas = false;
+        return config;
+    },
+    pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js']
 };
 
-export default withNextVideo(nextConfig, { folder: 'public/assets/videos' });
+export default withMdx(nextConfig);

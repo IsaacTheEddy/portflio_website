@@ -40,9 +40,15 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.gemini/
+/** My Ignores
+@/articles
+@lib/articles.ts
+
+
+
+
 gha-creds-*.json
-GEMINI.md 
+
 .github
 # next-video
 @/public/assets/*
