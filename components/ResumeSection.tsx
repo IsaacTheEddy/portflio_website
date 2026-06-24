@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useCallback } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import React, { useState } from "react";
 import dynamic from "next/dynamic";
 
 // Dynamically import the PDFViewer with SSR disabled to avoid canvas errors
@@ -10,18 +9,7 @@ const PDFViewer = dynamic(() => import("@/components/PDFViewer"), {
 });
 
 export default function ResumeChoice() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: false,
-    align: "start",
-  });
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const resumes = [
     {
@@ -41,18 +29,29 @@ export default function ResumeChoice() {
     // },
   ];
 
+  const scrollPrev = () => {
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : resumes.length - 1));
+  };
+
+  const scrollNext = () => {
+    setCurrentIndex((prev) => (prev < resumes.length - 1 ? prev + 1 : 0));
+  };
+
   return (
     <div className="flex flex-col items-center justify-center w-full">
       {/* CAROUSEL WRAPPER */}
       <div className="relative max-w-full px-4">
-        {/* EMBLA VIEWPORT */}
-        <div className="overflow-hidden" ref={emblaRef}>
-          {/* EMBLA CONTAINER */}
-          <div className="flex">
+        {/* VIEWPORT */}
+        <div className="overflow-hidden">
+          {/* CONTAINER */}
+          <div
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
             {resumes.map((resume, index) => (
               <div
                 key={index}
-                className="flex-[0_0_100%] min-w-0 flex-col md:flex-row items-center justify-around md:gap-16 px-4 md:px-12"
+                className="flex-[0_0_100%] min-w-0 flex flex-col md:flex-row items-center justify-around md:gap-16 px-4 md:px-12"
               >
                 {/* Title Section (Left) */}
                 <div className="w-full md:w-1/3 flex flex-col justify-center md:justify-end items-center text-white">
@@ -88,23 +87,26 @@ export default function ResumeChoice() {
         </div>
 
         {/* NAVIGATION BUTTONS */}
-        <div className="mt-6 flex justify-around gap-4">
-          <button
-            className="rounded opacity-90  px-4 py-2  transition-colors  bg-gray-700 text-white hover:bg-gray-600"
-            onClick={scrollPrev}
-            aria-label="Previous resume"
-          >
-            Previous
-          </button>
-          <button
-            className="rounded opacity-90  px-4 py-2  transition-colors  bg-gray-700 text-white hover:bg-gray-600"
-            onClick={scrollNext}
-            aria-label="Next resume"
-          >
-            Next
-          </button>
-        </div>
+        {resumes.length > 1 && (
+          <div className="mt-6 flex justify-around gap-4">
+            <button
+              className="rounded opacity-90  px-4 py-2  transition-colors  bg-gray-700 text-white hover:bg-gray-600"
+              onClick={scrollPrev}
+              aria-label="Previous resume"
+            >
+              Previous
+            </button>
+            <button
+              className="rounded opacity-90  px-4 py-2  transition-colors  bg-gray-700 text-white hover:bg-gray-600"
+              onClick={scrollNext}
+              aria-label="Next resume"
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
 }
+
