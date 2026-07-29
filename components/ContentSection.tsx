@@ -29,7 +29,7 @@ export default function ContentSection({
             height={500}
             className="rounded-3xl p-8 "
           />
-          <p className="text-l/loose">{children}</p>
+          <p className="md: text-2xl/loose text-l/loose">{children}</p>
         </div>
         {/* <div className="md: md:w-1/2 p-8 md:gap-x-10 rounded-2xl text-white">
           <h2 className="mt-5 mx-15 text-3xl font-bold mb-4 ">{title}</h2>

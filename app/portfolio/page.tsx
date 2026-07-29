@@ -1,22 +1,16 @@
 "use client";
 
 import Portfolio from "@/components/PortfolioSection";
-import IsaacPic from "@/public/assets/Isaac_Edwards_1_Formatted.jpg";
+import IsaacPic from "@/public/assets/Good_Selfie.jpg";
 import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import Link from "next/link";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContentSection from "@/components/ContentSection";
 import ResumeSolo from "@/components/ResumeSolo";
 import FooterSocials from "@/components/FooterSocials";
 import ContactMe from "@/components/ContactMe";
 import { redirect } from "next/navigation";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-
 export default function Home() {
-  const missionSectionRef = useRef(null);
   const portfolioRef = useRef(null);
 
   const scrollToSection = (sectionId: string) => {
@@ -27,19 +21,6 @@ export default function Home() {
       });
     }
   };
-
-  //   useGSAP(() => {
-  //     gsap.from(portfolioRef.current, {
-  //       yPercent: 100,
-  //       duration: 1,
-  //       scrollTrigger: {
-  //         trigger: missionSectionRef.current,
-  //         start: "bottom center",
-  //         toggleActions: "play none none none",
-  //       },
-  //     });
-  //   }, []);
-
   return (
     <div>
       {/* Hero Section */}

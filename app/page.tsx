@@ -18,7 +18,7 @@ export default function GridBackgroundView() {
             Isaac Edwards
           </h1>
           <p className="mt-4 text-lg text-slate-300 md:text-xl font-inter">
-            Software Developer
+            Software Developer x Data Analyst
           </p>
           <div className="flex flex-row w-full justify-center mt-10 gap-20 items-center font ">
             <Link href={"./portfolio"}>
