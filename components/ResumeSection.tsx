@@ -14,7 +14,7 @@ export default function ResumeChoice() {
   const resumes = [
     {
       title: "Full-Stack Web Developer",
-      file: "/Isaac Edwards Full-Stack Web Developer Resume.pdf",
+      file: "/Isaac Edwards Updated Full-Stack Res.pdf",
       text: "Full-stack web developer with a strong foundation in both front-end and back-end engineering",
     },
     // {
