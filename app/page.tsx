@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import ShimmerButton from "@/components/ShimmerButton";
 import DualCirclesBG from "@/components/DualCirclesBG";
+import GrafanaDashboard from "@/components/GrafanaDashboard";
 
 // Grid Background Component
 
@@ -10,9 +11,9 @@ import DualCirclesBG from "@/components/DualCirclesBG";
 // Main App Component
 export default function GridBackgroundView() {
   return (
-    <div className="relative w-full h-screen bg-background-neo overflow-hidden">
+    <div className="relative w-full min-h-screen bg-background-neo overflow-x-hidden">
       <DualCirclesBG />
-      <div className="relative z-10 flex items-center justify-center h-full">
+      <div className="relative z-10 flex items-center justify-center min-h-screen">
         <div className="text-center px-4">
           <h1 className="text-4xl font-bold text-white md:text-6xl lg:text-8xl font-playfairDisplay">
             Isaac Edwards
@@ -29,6 +30,11 @@ export default function GridBackgroundView() {
             </Link>
           </div>
         </div>
+      </div>
+
+      {/* Modular Live Metrics Section - can be moved to any page with <GrafanaDashboard /> */}
+      <div className="relative z-10 pb-20">
+        <GrafanaDashboard />
       </div>
     </div>
   );

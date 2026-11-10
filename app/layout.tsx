@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FaroTelemetry from "@/components/FaroTelemetry";
 
 import { Cormorant_Garamond, Poppins, Playfair_Display, Inter } from "next/font/google";
 
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${cormorant.variable} ${playfairDisplay.variable} ${inter.variable} antialiased `}
       >
+        <FaroTelemetry />
         {children}
       </body>
     </html>
