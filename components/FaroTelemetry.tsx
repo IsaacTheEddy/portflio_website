@@ -33,7 +33,7 @@ export default function FaroTelemetry() {
 
     const url = process.env.NEXT_PUBLIC_FARO_URL || DEFAULT_FARO_URL;
 
-    if (!faro.api) {
+    if (!faro.config) {
       initializeFaro({
         url,
         app: {
